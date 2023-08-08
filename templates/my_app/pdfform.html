@@ -1,0 +1,12 @@
+{% extends "admin/index.html" %}
+{% block content %}
+
+<form action="{% url 'pdf_find' %}" method="POST">
+    {% csrf_token %}
+    <input type="text" required placeholder="Ведите слово" name="word"><br>
+    <input type="file" name="file"><br>
+    <button type="submit">Найти</button>
+</form>
+
+{% endblock %}
+
